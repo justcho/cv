@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>web前端-曹应杰</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #eee;
+      margin: 20px 0;
+    }
+
+    article {
+      width: 21cm;
+      min-height: 29.7cm;
+      background: white;
+      margin: 0 auto;
+      overflow: auto;
+      padding: 1em;
+    }
+  </style>
+  <style media="print">
+    body {
+      margin: 0;
+    }
+
+    .page2 {
+      page-break-before: always;
+      margin-top: 30px;
+    }
+  </style>
+  <style>
+    body {
+    }
+
+    p {
+      margin: .3em 0;
+    }
+
+    h1 {
+      font-size: 25px;
+      margin-top: 0;
+    }
+
+    h4,
+    h5,
+    h6 {
+      font-weight: normal;
+    }
+
+    ol,
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    strong {
+      font-weight: normal;
+      color: #59C8A3;
+    }
+
+    a {
+      color: #999;
+      text-decoration: none;
+      border-bottom: 1px solid;
+      /*cursor:pointer;*/
+    }
+
+    a:hover {
+      color: #59C8A3
+    }
+
+    p,
+    li {
+      color: #666;
+    }
+
+    strong {
+      font-weight: normal;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+    }
+
+    .bio {
+      position: relative;
+    }
+
+    .bio img {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  </style>
+
+  <style>
+    .projects {
+    }
+
+    .projects p {
+      color: #666;
+    }
+
+    .projects strong {
+      color: #59C8A3;
+    }
+
+    .projects > ol {
+      margin-top: 0;
+      list-style-position: inside;
+      padding: 0;
+    }
+
+    .projects > ol > li {
+      margin-bottom: 24px;
+    }
+
+    .projects > ol > li > header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .projects > ol > li h3 {
+      display: inline-block;
+    }
+  </style>
+  <style>
+    .skills {
+      margin-top: 20px;
+    }
+
+    #skills {
+
+      width: 500px;
+      height: 370px;
+    }
+
+    @media print {
+      #skills {
+        display: none;
+      }
+      .attention{
+        display: none;
+      }
+    }
+
+
+    .skills > .wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .skills > .wrapper > :first-child {
+      margin-right: 24px;
+    }
+
+    .skills > .wrapper > #skills {
+    }
+
+    .skills > .wrapper > ul {
+      color: #666;
+    }
+
+    .skills > .wrapper strong {
+      color: #59C8A3;
+    }
+
+    .skills > .wrapper > ul > li {
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+  </style>
+  <style>
+    .openSource {
+    }
+
+    .openSource > h2 {
+    }
+
+    .openSource header img {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .openSource > ul {
+    }
+
+    .openSource > ul > li {
+      margin-bottom: 24px;
+    }
+
+    .openSource header {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .openSource h3 {
+    }
+  </style>
+  <style>
+    .jobs {
+    }
+
+    .jobs > h2 {
+    }
+
+    .jobs > ol {
+    }
+
+    .jobs > ol > li {
+      margin: 12px 0;
+    }
+
+    .jobs header {
+      display: flex;
+      color: #666;
+      margin-bottom: 12px;
+    }
+
+    .jobs header > h3 {
+      font-size: 18px;
+      color: #333;
+    }
+
+    .jobs header > h4 {
+      margin-left: 1em;
+      font-size: 18px;
+    }
+
+    .jobs header > span {
+      font-size: 18px;
+      margin-left: auto;
+    }
+  </style>
+
+
+  <style>
+      .link-pc{
+       display: none; 
+      }
+    @media (max-width: 500px) {
+      body {
+        margin: 0;
+      }
+
+      article {
+        width: auto;
+        height: auto;
+      }
+
+      .bio img {
+        display: none;
+      }
+
+      .skills .wrapper {
+        flex-direction: column;
+      }
+
+      #skills {
+        width: 100%;
+      }
+
+      .jobs header {
+        flex-direction: column;
+      }
+
+      .jobs header > h3,
+      .jobs header > h4,
+      .jobs header > span {
+        margin: 0;
+
+      }
+      .jobs header > span > time{
+        font-size: 17px;
+      }
+      .img-pc{
+        display: none;
+      }
+      .link-pc{
+       display: inline-block; 
+      }
+      .attention{
+        display: none;
+      }
+    }
+  </style>
+
+</head>
+<body>
+<article>
+  <section class="attention" >
+    <h2 >
+      <span style="color: red;">注：</span> <strong>Ctrl+P</strong> 可导出PDF</h2>
+  </section>
+  <section class="bio">
+    <h1>曹应杰</h1>
+    <!-- <img src="./images/cun.jpg" alt="" width="123" height="172"> -->
+    <p>
+      男 | 30岁 | 中级前端开发工程师 | 工作经验：4年+
+    </p>
+    <p>
+      手机：<a href="tel:13103431817">13103431817</a> | 微信：justcho1817 | 邮箱：<a
+        href="mailto:justcho@163.com">justcho@163.com</a>
+    </p>
+  </section>
+  <section class="projects">
+    <h2>项目经历</h2>
+    <ol>
+      <li>
+        <header style="position: relative">
+          <h3>Gladys</h3>
+          <span>
+            <a href="https://web.onlinesurvey.site" target="_blank" >项目预览</a>
+        </span>
+        </header>
+        <p>
+          一个基于 <strong>Javascript</strong>/ <strong>Vue</strong>/ <strong>TRTC</strong> 的线上会议系统。
+        </p>
+        <p>Pad端使用 <strong>Vue</strong> / <strong>Javascript</strong> / <strong>TRTC</strong> / <strong>Ant design </strong>/ <strong>WebSocket </strong> 实现了主持人</p>
+         <p> 实时会议，控制参会人麦克风 摄像头展示 及在线推题，参会人中途入会</p>
+         <p> 在线答题，客户实时查看会议 在线聊天室及会议中会议后数据展示。</p>
+         <p>会议后视频展示，会议数据展示，项目数据展示,生成会议文件提问 <strong>chatGpt</strong>。</p>
+        <p>管理端使用 <strong>Vue3</strong> / <strong>Typescript</strong> / <strong>Arco design pro</strong> 实现创建项目 创建题目 创建会议</p>
+        <p>及会议后视频展示，会议数据展示，项目数据展示，生成会议文件提问 <strong>chatGpt</strong>。</p>
+      </li>
+      <li>
+        <header style="position: relative">
+          <h3>EQMJ</h3>
+          <!-- <img class="img-pc" src="./images/yh.jpg" width="150" height="175" style="position: absolute; right: 0;top:-25px"/> -->
+          <span>
+            <a href="https://www.eqmj.cc" target="_blank" >项目预览</a>
+        </span>
+        </header>
+        <p>
+          基于  <strong>Javascript</strong> / <strong>Vue3</strong> 的生图系统。
+        </p>
+        <p>是一款专为 Midjourney 而生的辅助工具,借助 EQMJ,你可以快速掌握 Midjourney </p>
+        <p>咒语撰写与编辑,低成本实现从入门到精通。</p>
+      </li>
+      <li>
+        <header style="position: relative">
+          <h3>数康师患者端</h3>
+          <!-- <img class="img-pc" src="./images/yh.jpg" width="150" height="175" style="position: absolute; right: 0;top:-25px"/> -->
+        </header>
+        <p>预览：微信小程序搜索 <strong>数康师</strong></p>
+        <p>
+          基于  <strong>Javascript</strong> / <strong>微信原生</strong> 的小程序。
+        </p>
+        <p>该类项目为康复类类的小程序。包括 <strong>医生端</strong> / <strong>患者端</strong>。</p>
+        <p>
+          其中 <strong>小程序</strong> 基于 <strong>微信原生开发</strong>
+          主要功能:医生出处方 患者根据锻炼计划跟视频进行锻炼。
+        </p>
+        <p>锻炼完之后的量表记录 在线咨询主治医师及训练数据 分享训练数据。</p>
+      </li>
+
+      <li>
+        <header style="position: relative">
+          <h3>新时代文明实践云平台</h3>
+          <span>
+            <a href="https://xsdsassh5.chwhyun.cn/#/pages/index/index?teant_id=41600" target="_blank" >项目预览</a>
+        </span>
+          <!-- <img class="img-pc" src="./images/qrcode.png" width="144" height="144" style="position: absolute; right: -9px;top:20px"/> -->
+        </header>
+        <p>
+          一个基于 <strong>Uniapp</strong> / <strong>Javascript</strong>/ <strong>Vue</strong> 的SaaS平台。
+        </p>
+        <p>该类项目为 新时代文明实践的 sass 平台,        该平台包括 <strong>H5</strong> / <strong>后台管理系统</strong> / <strong>大屏</strong>。</p>
+        <!-- <p>新时代文明实践云平台充分利用大数据、移动互联网等新一代信息技术，</p> -->
+        <!-- <p>打造“新时代文明实践+志愿服务+大数据”互通互融工作体系。</p> -->
+        <p>
+  
+        </p>
+        <p>
+          其中 H5 基于 <strong>Uniapp</strong> 开发，主要功能: 志愿组织，群众点单，志愿者活动等。
+        </p>
+        <p> 后台管理系统基于 <strong>Vue</strong> / <strong>ant-design</strong> 开发,主要功能:
+          前台信息管理，审核等。</p>
+        <p>
+          大屏 基于 <strong>Vue</strong> / <strong>DataV</strong> / <strong>echarts</strong>
+          开发,主要功能:文明实践数据展示等。
+        </p>
+      </li>
+      <li>
+        <header style="position: relative">
+          <h3>文旅类小程序</h3>
+          <img class="img-pc" src="./images/yh.jpg" width="150" height="175" style="position: absolute; right: 0;top:-25px"/>
+        </header>
+        <p class="link-pc">预览：微信小程序搜索 <strong>一部手机游盐湖</strong></p>
+        <p>
+          一般基于 <strong>Uniapp</strong> / <strong>Javascript</strong> / <strong>微信原生</strong> 的小程序。
+        </p>
+        <p>该类项目一般为文旅资讯类的小程序。该平台包括 <strong>小程序</strong> / <strong>后台管理系统</strong>。</p>
+        <p>
+          其中 <strong>小程序</strong> 基于 <strong>Uniapp</strong> / 
+          <strong>微信原生开发</strong>
+          主要功能:文化信息，展示，导览等。
+        </p>
+        
+        <p><strong>后台管理系统</strong> 基于 <strong>Vue</strong> / <strong>ant-design</strong> 开发,主要功能:前台信息管理等。
+        </p>
+      </li>
+      <li>
+        <header>
+          <h3>记账</h3>
+          <span>
+            <a href="https://justcho.github.io/money-react-1/index.html" target="_blank">React版</a>
+            <a href="https://justcho.gitee.io/money-website" target="_blank">Vue版</a>
+          </span>
+        </header>
+        <p>
+          一个基于 <strong>Vue</strong> / <strong>React</strong> / <strong>TypeScript</strong> 的移动端单页面应用。
+        </p>
+        <p>
+          这是我从自己的需求出发，设计出的极简记账应用，特点是快速记账，而且可以通过图表查看自己的消费习惯，了解自己的财务状况。
+        </p>
+        <p>
+          该项目使用 <strong>Vue全家桶</strong> / <strong>React Hooks</strong>，并结合 <strong>表驱动编程</strong>、<strong>模块化思想</strong>、
+          <strong>重构技巧</strong> 对代码进行多次重构跟简化。
+        </p>
+        <p>
+          源代码几乎全用 <strong>TypeScript</strong> 实现，用到了
+          <strong>装饰器语法</strong>。
+        </p>
+        <p>
+          项目中用到了 <strong>ECharts</strong> 由于适用性的问题自己进行了手动封装。
+        </p>
+      </li>
+
+    </ol>
+  </section>
+  <section class="skills">
+    <h2>技能</h2>
+    <div class="wrapper">
+      <div id="skills"></div>
+      <ul>
+        <li>熟悉页面制作技巧，能将设计稿 <strong>完美还原</strong> </li>
+        <li>熟悉 <strong>前后端分离</strong> 技术，包括 AJAX、跨域、前端路由、Cookie、Session 等</li>
+        <li>熟练使用</strong></strong> <strong>Vue全家桶</strong>，包括 VueCli、VueRouter、Vuex 等</li>
+        <li>熟悉 ES6，包括 let / Promise / await / 析构赋值</li>
+        <li>熟悉 <strong>Uniapp</strong> 及 <strong>微信小程序</strong> 的开发</li>
+        <li>了解 <strong>React全家桶</strong> ，包括 create-react-app、ReactRouter、Hooks 等</li>
+        <li>了解 <strong>Vue3</strong> ，了解 <strong>TypeScript</strong> 的使用，我的有些项目就是 TS 实现的</li>
+        <!-- <li></li> -->
+        <!-- <li>了解 <strong>Webpack 的配置和优化</strong></li></strong> -->
+      </ul>
+    </div>
+  </section>
+
+  <section class="openSource">
+    <h2>开源项目</h2>
+    <ul>
+      <li>
+        <header>
+          <h3>JustCho's Blog</h3>
+          <span>
+                        <a href="https://github.com/justcho/blog">源码链接</a>
+                        <a href="https://justcho.life/" target="_blank">项目预览</a>
+                    </span>
+        </header>
+        <p>
+          自己基于 <strong>Vue3</strong> / <strong>Vitepress</strong>/ <strong>TypeScript</strong> 搭建的博客网站。
+        </p>
+        <p>
+          最近发现 vitepress 出了测试版 感觉还不错就自己搭了一个，并把自己之前的文章都迁移过来了，
+          主页是按照自己想法做的，加了一部分动画效果，并做了移动端的适配,首页全程亲手编写，没有采用第三方库。
+        </p>
+      </li>
+      <li>
+        <header>
+          <h3>Just Devise</h3>
+          <span>
+                        <a href="https://justcho.github.io/just-devise/" target="_blank">项目预览</a>
+                    </span>
+        </header>
+        <p>
+          一款基于 <strong>Vue3</strong>，面向开发者的组件库
+        </p>
+        <p>
+          主要组件有 <strong>Input  输入框</strong> 、<strong>Tab 标签页</strong> 、<strong>Dialog 对话框</strong>、<strong>switch 开关</strong> 等。
+        </p>
+        <p>
+          这款组件库其实是我为了学习 Vue3 而写的，使用 <strong>Vue3 Composition API</strong> 、<strong>TypeScript</strong> 全程亲手编写，没有采用第三方库。
+        </p>
+      </li>
+      <!-- <li>
+        <header>
+          <h3>UI库-Vue</h3>
+          <span>
+                        <a href="https://github.com/justcho/tutu-demo" target="_blank">源码链接</a>
+                        <a href="https://justcho.gitee.io/tutu/" target="_blank">项目预览</a>
+                    </span>
+        </header>
+        <p>
+          一款基于 <strong>Vue</strong> / <strong>JavaScript</strong> / <strong>Webpack</strong> 的 UI 框架。
+
+        </p>
+        <p>
+          主要组件有Button组件、Tab切换、Toast弹窗、Grid栅栏布局等。
+        </p>
+        <p>
+          开发过程中让我对 Vue 的API 和 Javascript 有了新的认识。
+        </p>
+      </li> -->
+      <li>
+        <header>
+          <h3>图床</h3>
+          <span>
+                        <a href="https://justcho.github.io/react-pic/" target="_blank">项目预览</a>
+                    </span>
+        </header>
+        <p>
+          一款基于 <strong>React</strong> 的图床工具
+        </p>
+        <p>
+          前端使用 <strong>React</strong>、<strong>JavaScript</strong>、<strong>mobx</strong>、<strong>antd</strong>
+          后端使用 Leancloud (一个 BaaS 提供商)
+        </p>
+      </li>
+      <li>
+        <header>
+          <h3>简易画板</h3>
+          <span>
+                        <a href="https://github.com/justcho/canvas-draw" target="_blank">源码链接</a>
+                        <a href="https://justcho.gitee.io/canvas-draw/src/index.html" target="_blank">项目预览</a>
+                    </span>
+        </header>
+        <p>我在学习 <strong>Canvas</strong> 时做的一个小作品。</p>
+        <p>该项目实现了相对流畅的绘画、橡皮擦、保存等功能，使用了 <strong>CSS</strong>、<strong>JavaScript</strong>。</p>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2>博客文章</h2>
+    <ul>
+      <li><a href="https://justcho.life/" target="_blank">我的博客</a>，目前已有超过 <strong>100</strong> 篇技术文章</li>
+    </ul>
+  </section>
+  <section class="jobs">
+    <h2>工作经历</h2>
+    <ol>
+      <li>
+        <header>
+          <h3> 北京医月科技有限公司</h3>
+          <h4>前端开发工程师</h4>
+          <span><time>2023/08</time>~<time>2024/04</time></time></span>
+        </header>
+        <ul>
+          <li>开发数康师小程序</li>
+          <li>使用 <strong>Vue</strong>、<strong>Ant design</strong>、<strong>trtc SDK</strong> 开发线上会议系统</li>
+          <li>使用 <strong>Vue3</strong>、<strong>Arco design pro</strong>、<strong>TypeScript</strong> 开发后台管理系统</li>
+        </ul>
+      </li>
+      <!-- <li>
+        <header>
+          <h3> 山西奥通信息技术有限公司</h3>
+          <h4>前端开发工程师</h4>
+          <span><time>2022/12</time>~<time>2023/08</time></time></span>
+        </header>
+        <ul>
+          <li>使用 <strong>uniapp</strong> 开发安卓APP</li>
+          <li>使用 <strong>AVue</strong>、<strong>elementUI</strong> 开发运维管理系统</li>
+          <li>使用 <strong>Vue全家桶</strong>、<strong>dataV</strong>、<strong>ECharts</strong> 开发运维大屏</li>
+        </ul>
+      </li>
+      <li> -->
+        <header>
+          <h3> 山西辰涵数字传媒股份有限公司</h3>
+          <h4>前端开发工程师</h4>
+          <span><time>2021/06</time>~<time>2023/08</time></span>
+        </header>
+        <ul>
+          <li>使用 <strong>uniapp</strong> 开发H5、小程序</li>
+          <li>使用 <strong>Vue</strong>、<strong>ant-design</strong> 开发后台管理系统</li>
+          <li>使用 <strong>Vue全家桶</strong>、<strong>dataV</strong>、<strong>ECharts</strong> 开发大屏</li>
+          <li>使用 <strong>three.js</strong> 做过模型展示</li>
+        </ul>
+      </li>
+      <li>
+        <header>
+          <h3> 杭州立方控股股份有限公司 </h3>
+          <h4>前端开发工程师</h4>
+          <span><time>2020/01</time>~<time>2021/03</time></span>
+        </header>
+        <ul>
+          <li>使用 Vue、 <strong>Javascript</strong> 开发自研产品 </li>
+          <li>使用 Remax、<strong>Javascript</strong> 进行小程序开发 </li>
+          <li>使用 <strong>React</strong>、 ant-design、 进行后台管理系统开发</li>
+        </ul>
+      </li>
+      <!-- <li>
+        <header>
+          <h3> 杭州立方控股股份有限公司 </h3>
+          <h4>软件技术支持</h4>
+          <span><time>2017年10月</time>~<time>2020年1月</time></span>
+        </header>
+      </li> -->
+    </ol>
+  </section>
+  <section class="education">
+    <h2>教育经历</h2>
+    <p>
+      <span><time>2014年</time>~<time>2017年</time></span>
+      天津渤海职业技术学院 计算机网络技术
+    </p>
+  </section>
+
+</article>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>

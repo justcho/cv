@@ -1,0 +1,15 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@gitee.com:justcho/cv.git",
+  "author": "just <1620845677@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+    "scripts": {
+      "dev": "parcel index.html",
+      "build": "parcel build index.html"
+    }
+}
